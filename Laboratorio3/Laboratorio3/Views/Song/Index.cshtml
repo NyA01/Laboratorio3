@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model List<Laboratorio3.Models.SongModel>;
+
+@{
+    ViewData["Title"] = "Song";
+}
+
+<h1>@ViewBag.MainTitle </h1>
+
+<body>
+
+
+    <div>
+        @foreach (var item in Model)
+        {
+            <p>
+                Name: <input type"text" placeholder="@item.Name" />
+            </p>
+            <p>
+                Autor: <input type"text" placeholder="@item.Autor" />
+            </p>
+            <p>
+                Genre: <input type"text" placeholder="@item.Genre" />
+            </p>
+            <p>
+                Album: <input type"text" placeholder="@item.Album" />
+            </p>
+            <p>
+                ReleasedDate: <input type"text" placeholder="@item.ReleasedDate" />
+            </p>
+
+        }
+    </div>
+</body>
